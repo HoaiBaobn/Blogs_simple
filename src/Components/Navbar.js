@@ -1,10 +1,9 @@
-import { Avatar } from "@material-ui/core";
 import React, { useState } from "react";
 import { GoogleLogout } from "react-google-login";
 import { useSelector, useDispatch } from "react-redux";
 import {
     selectSignedIn,
-    selectUserData,
+    //  selectUserData,
     setInput,
     setSignedIn,
     setUserData,
@@ -12,9 +11,9 @@ import {
 import "../styling/navbar.css";
 
 const Navbar = () => {
-    const [inputValue, setInputValue] = useState("tech");
+    const [inputValue] = useState("tech");
     const isSignedIn = useSelector(selectSignedIn);
-    const userData = useSelector(selectUserData);
+    // const userData = useSelector(selectUserData);
 
     const dispatch = useDispatch();
 
@@ -22,14 +21,14 @@ const Navbar = () => {
         dispatch(setSignedIn(false));
         dispatch(setUserData(null));
     };
-    const handleClick = (e) => {
-        e.preventDefault();
-        dispatch(setInput(inputValue));
-    };
+    // const handleClick = (e) => {
+    //     e.preventDefault();
+    //     dispatch(setInput(inputValue));
+    // };
     return (
         <div className="navbar">
             <h1 className="navbar__header">Blogs</h1>
-            {isSignedIn && (
+            {/* {isSignedIn && (
                 <div className="blog__search">
                     <input
                         className="search"
@@ -41,7 +40,7 @@ const Navbar = () => {
                         Search
                     </button>
                 </div>
-            )}
+            )} */}
             {isSignedIn ? (
                 <div className="navbar__user__data">
                     <GoogleLogout

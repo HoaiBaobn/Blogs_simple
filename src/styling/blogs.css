@@ -1,16 +1,17 @@
-.blog__page {
-    padding: 30px 170px;
+@media screen and (min-width: 767px) {
+    .blog__page {
+        padding: 30px 150px;
+    }
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px 25px;
+    }
 }
 
 .blog__page__header {
     letter-spacing: -1px;
     font-size: 35px;
-}
-
-.blogs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px 25px;
 }
 
 .blog {

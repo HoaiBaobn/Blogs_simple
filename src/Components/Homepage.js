@@ -16,7 +16,7 @@ const Homepage = () => {
     const login = (response) => {
         console.log(response);
         dispatch(setSignedIn(true));
-        dispatch(setUserData(response.profileObj));
+        // dispatch(setUserData(response.profileObj));
     };
 
     return (
