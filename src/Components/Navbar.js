@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { GoogleLogout } from "react-google-login";
 import { useSelector, useDispatch } from "react-redux";
 import {
     selectSignedIn,
     //  selectUserData,
-    setInput,
     setSignedIn,
     setUserData,
 } from "../features/userSlice";
 import "../styling/navbar.css";
 
 const Navbar = () => {
-    const [inputValue] = useState("tech");
     const isSignedIn = useSelector(selectSignedIn);
     // const userData = useSelector(selectUserData);
 
