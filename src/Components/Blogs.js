@@ -47,7 +47,7 @@ const Blogs = (props) => {
                     </div>
                 ))}
 
-                {blogs?.totalArticles == 0 && (
+                {blogs?.totalArticles === 0 && (
                     <h1 className="no__blogs">
                         No blogs available 😞. Search something else to read
                         blogs on the greatest platform.
